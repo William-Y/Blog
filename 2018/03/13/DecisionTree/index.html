@@ -96,7 +96,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Decision-Tree"><span class="toc-text"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Establishment-of-Decision-Tree"><span class="toc-text"><a href="#The-Establishment-of-Decision-Tree" class="headerlink" title="The Establishment of Decision Tree"></a>The Establishment of Decision Tree</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Decision-Tree"><span class="toc-text"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Brief-Flow-Path"><span class="toc-text"><a href="#Brief-Flow-Path" class="headerlink" title="- Brief Flow Path"></a>- Brief Flow Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Strategy-of-Choosing-Features"><span class="toc-text"><a href="#The-Strategy-of-Choosing-Features" class="headerlink" title="- The Strategy of Choosing Features"></a>- The Strategy of Choosing Features</span></a></li></ol></li></ol></li></ol>
     </div>
   </div>
 
@@ -104,16 +104,15 @@
   <div class="post-content">
     <h2 id="Decision-Tree"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</h2><p><em>It’s a study note during the learning process of Algorithm of Machine Learning</em></p>
 <p><em>The model to be introduced is based on the genesis version of Decision Tree.–ID3 Decision Tree.</em></p>
-<h4 id="The-Establishment-of-Decision-Tree"><a href="#The-Establishment-of-Decision-Tree" class="headerlink" title="The Establishment of Decision Tree"></a>The Establishment of Decision Tree</h4><p>** Here are some critical points of this process.</p>
+<p><em>Here are some critical points of this process.</em></p>
 <ul>
-<li>Recursion</li>
 <li>Information Entropy</li>
 <li>Information Gain</li>
 </ul>
 <p><em>We will introduce these concepts at the steps in need.</em></p>
 <hr>
-<p>To build a decsion tree, we first should learn to build a tree.</p>
-<p>Here comes to the first point,<em>Recursion</em>.</p>
+<h4 id="Brief-Flow-Path"><a href="#Brief-Flow-Path" class="headerlink" title="- Brief Flow Path"></a>- Brief Flow Path</h4><p>   For a given data set, we assume that all the value of its features are discrete.Now, we build a root node that represent the whole data set. To enable us to make a better decision, we need to find a feature to split the data set into a number of pieces based on the number of values in this feature. More than that, the feature we’ve chosen should make those small datasets bias enough for us to make decision. For those small pieces which is still not bias enough, we need to repeat this preocess on them till they are enough for you to make decision or the features are used up.</p>
+<h4 id="The-Strategy-of-Choosing-Features"><a href="#The-Strategy-of-Choosing-Features" class="headerlink" title="- The Strategy of Choosing Features"></a>- The Strategy of Choosing Features</h4><p>  Here we need to understand a critical concept mentioned above : <em>Information Entropy</em>, which represent the chaotic of the information a system conclude.</p>
 
   </div>
   <div class="post-footer">the end</div>
