@@ -111,8 +111,16 @@
 </ul>
 <p><em>We will introduce these concepts at the steps in need.</em></p>
 <hr>
-<h4 id="Brief-Flow-Path"><a href="#Brief-Flow-Path" class="headerlink" title="- Brief Flow Path"></a>- Brief Flow Path</h4><p>   For a given data set, we assume that all the value of its features are discrete for simplyfying. Now, we build a root node that represent the whole data set. To enable us making better decision, we need to find a feature that split the data set into a number of pieces based on its values. More than that, the feature we’ve chosen should make those small datasets bias enough for us to make decision. For those small pieces which is still not bias enough, we need to repeat this preocess on them till they are bias enough or the features are used up.</p>
-<h4 id="Choosing-Features"><a href="#Choosing-Features" class="headerlink" title="- Choosing Features"></a>- Choosing Features</h4><p>  Here we need to understand a critical concept mentioned above : <em>Information Entropy</em>, which represent the chaotic of the information a system conclude.</p>
+<h4 id="Brief-Flow-Path"><a href="#Brief-Flow-Path" class="headerlink" title="- Brief Flow Path"></a>- Brief Flow Path</h4><p>   For a given data set, we assume that all the value of its features are discrete for simplyfying. Now, we build a root node that represent the whole data set.<br>  To enable us making better decision, we need to find a feature that split the data set into a number of pieces based on its values. More than that, the feature we’ve chosen should make those small datasets bias enough for us to make decision. For those small pieces which is still not bias enough, we need to repeat this preocess on them till they are bias enough or the features are used up.</p>
+<h4 id="Choosing-Features"><a href="#Choosing-Features" class="headerlink" title="- Choosing Features"></a>- Choosing Features</h4><p>  Here we need to understand a critical concept mentioned above : <em>Information Entropy</em>, which is a kind of measurement for testing the purity of a sample set.</p>
+<p>  We denote <em>Ent(D)</em> as the Information Entropy of dataset <em>D</em>.</p>
+<p>  Another concept named <em>Information Gain</em> is the different between the Information Entropy of D and the after-split dataset.</p>
+<p>  We denote <em>Gain(D,a)</em> as the Information Gain of <em>D</em> while the chosen feature is <em>a</em>.</p>
+<p>  Now,for every time that we need to expand the Decision Tree, we can use the Information Gain to estimate every feature remains and choose the one that maximazing the Information Gain.</p>
+<p>  Actually, the algorithm of ID3 is just as simple as above. But it’s indeed efficient and accurate for many situation.</p>
+<p>  Nevertheless, in the family of Decision Tree, there are many improved algorithm such as ID4.5, CART that is based on ID3.</p>
+<p>  For ID4.5, it substitutes the Information Gain with Information Gain Ratio as the criteria for choosing features. And CART uses the Gini index instead.</p>
+<p>  They all optimize the ID3 in some aspect and improve the accuracy of classification. Moreover, the CART can be used in regression question.</p>
 
   </div>
   <div class="post-footer">the end</div>
