@@ -133,8 +133,8 @@
 <ol>
 <li><p>半自动分割 <em>（Auto-Segmentation）</em></p>
 <p> 半自动分割的使用分为几步：</p>
-<p>   a. 在<em>Inspector</em> 区域中选定ROI <em>（Region of  Interest）</em>，即图像中出现的红色虚线所表示区域。勾选 <em>Resample ROI</em> 表示在分割时可重新选定标注区域；勾选 <em>Initialize with currer segmentation</em>  表示使用当前标注区域作为最后区域生长的种子。</p>
-<p>   b. 点击<em>Segment 3D</em> ，进入分割模式选项。在软件框右方出现预分割阶段1 <em>（Presegmentation Stage 1）</em>，在Action中可选择预分割模式 <em>（Presegmentation mode）</em>， 该软件共有四种预分割模式，阈值模型 <em>（Thresholding）</em>，分类模型 <em>（Classification）</em>，聚类模型 <em>（Clustering）</em>以及边缘吸引模型 <em>（Edge Attraction）</em>。</p>
+<p> a. 在<em>Inspector</em> 区域中选定ROI <em>（Region of  Interest）</em>，即图像中出现的红色虚线所表示区域。勾选 <em>Resample ROI</em> 表示在分割时可重新选定标注区域；勾选 <em>Initialize with currer segmentation</em>  表示使用当前标注区域作为最后区域生长的种子。</p>
+<p> b. 点击<em>Segment 3D</em> ，进入分割模式选项。在软件框右方出现预分割阶段1 <em>（Presegmentation Stage 1）</em>，在Action中可选择预分割模式 <em>（Presegmentation mode）</em>， 该软件共有四种预分割模式，阈值模型 <em>（Thresholding）</em>，分类模型 <em>（Classification）</em>，聚类模型 <em>（Clustering）</em>以及边缘吸引模型 <em>（Edge Attraction）</em>。</p>
 <p>   选择完模型后，则需要针对不同的模型对参数进行不同的处理。</p>
 <ol>
 <li><p>阈值模型 <em>（Thresholding）</em></p>
@@ -153,13 +153,13 @@
 <p>在预分割阶段2 <em>（Presegmentation Stage 2）</em> 中，点击<em>Add Bubble at Cursor</em>，在交叉线交点添加<em>Bubble</em>，并以此作为图像生长的种子，在按钮下方可调整<em>Bubble</em>大小。    </p>
 </li>
 </ol>
-<p>​      d. 点击<em>Next</em> 进入预分割阶段3 <em>（Presegmentation Stage 3）</em>， 可在 <em>Set Parameters …</em> 可设置生长算法的参数。</p>
+<p>​ d. 点击<em>Next</em> 进入预分割阶段3 <em>（Presegmentation Stage 3）</em>， 可在 <em>Set Parameters …</em> 可设置生长算法的参数。</p>
 <p>设置完参数后，点击下方▶按钮进行生长。其右边的按钮表示进行一次迭代，左边的按钮表示恢复原状态。</p>
-<p> 在生长完成后，点击下方<em>Finish</em>按钮完成自动标注，标注数据会显示在图像中。</p>
+<p>在生长完成后，点击下方<em>Finish</em>按钮完成自动标注，标注数据会显示在图像中。</p>
+<p>  在此三种标注方法之后，点击图像显示区域的左下角的<em>update</em>按钮可将标注块的3D影像图显示在第三块图像区域中。</p>
 </li>
 </ol>
-<pre><code>在此三种标注方法之后，点击图像显示区域的左下角的*update*按钮可将标注块的3D影像图显示在第三块图像区域中。
-</code></pre><ul>
+<ul>
 <li><h6 id="分割数据-（Segmentation）"><a href="#分割数据-（Segmentation）" class="headerlink" title="分割数据 （Segmentation）"></a>分割数据 <em>（Segmentation）</em></h6><p>​    对于加载入图像显示区域的图像，可以通过<em>Segmentation</em> 菜单中的<em>Open Segmentation</em> 工具或者<em>Recent Segmentation</em> 直接载入图像的标注数据。</p>
 <p>​    对于已标注的图像数据，也可以通过<em>Segmentation</em>菜单中的<em>Save Segmentation Image</em> 工具保存或者<em>Unload Segmentation</em> 卸载图像数据的标注数据。</p>
 <p>​    对于<em>Label</em> 数据亦可通过<em>Import Label Description</em>载入标签，<em>Export Label Description</em> 保存标签。</p>
