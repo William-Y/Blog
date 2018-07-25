@@ -72,45 +72,6 @@
     <article class="post" id="post-excerpt">
       <header>
         <div class="post-title">
-          <h1><a class="post-title-link" href="/2018/07/25/ITK-VTK-Configuring/"></a></h1>
-        </div>
-        <div class="post-meta">
-          <span class="post-time"><i class="iconfont icon-calendar"></i>2018-07-25</span>
-          
-          <!---------------------------------------->
-            
-        <!----------------------------------------->
-        </div>
-      </header>
-      <div class="post-content">
-        <!-------------->
-        
-          <h2 id="SimpleITK-Activiz-NET-Win10环境配置过程"><a href="#SimpleITK-Activiz-NET-Win10环境配置过程" class="headerlink" title="SimpleITK-Activiz .NET Win10环境配置过程"></a>SimpleITK-Activiz .NET Win10环境配置过程</h2><h3 id="Simple-ITK-配置（IDE-Visual-Studio-2017）"><a href="#Simple-ITK-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Simple ITK 配置（IDE:Visual Studio 2017）"></a>Simple ITK 配置（IDE:Visual Studio 2017）</h3><ol>
-<li>下载源码并解压缩<em>（x64 version）</em> <a href="https://sourceforge.net/projects/simpleitk/files/SimpleITK/1.1.0/CSharp/SimpleITK-1.1.0-CSharp-win64-x64.zip/download" target="_blank" rel="noopener">源蛤网址</a></li>
-<li>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</li>
-<li>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的SimpleITKCSharpManaged.dll添加入引用，勾选后确定。</li>
-<li>将SimpleITKCSharpNative.dll添加至探测路径，即xaml代码所在处。</li>
-</ol>
-<h3 id="Activiz-NET-配置（IDE-Visual-Studio-2017）"><a href="#Activiz-NET-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Activiz .NET 配置（IDE: Visual Studio 2017）"></a>Activiz .NET 配置<em>（IDE: Visual Studio 2017）</em></h3><ol>
-<li><p>下载压缩包Activiz .NET并解压缩<em>（x64 version）</em><a href="https://github.com/William-Y/SwanGeeseDocFile" target="_blank" rel="noopener">Git网址</a> </p>
-</li>
-<li><p>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</p>
-</li>
-<li><p>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的Kitware.mummy.Runtime.dll 与 Kitware.VTK.dll添加入引用，勾选后确定。</p>
-</li>
-</ol>
-
-        
-        <!-------------->
-      </div>
-      <div class="post-tags">
-      
-    </div>
-    </article>
-  
-    <article class="post" id="post-excerpt">
-      <header>
-        <div class="post-title">
           <h1><a class="post-title-link" href="/2018/07/25/SwanGeeseDoc/"></a></h1>
         </div>
         <div class="post-meta">
@@ -148,59 +109,43 @@
 </ol>
 </li>
 </ul>
-<pre><code>2. 毛刷分割 *（Paintbrush）*
-
-   ​    毛刷分割需要使用者自行涂刷标注区域。涂刷风格有方形与圆形，且可选择毛刷大小。
-
-   ​    毛刷分割中还有一种区域为自适应涂写，可自动识别毛刷所在区域中的灰度值，并且可以自行识别边界进行标注。
-
-   ​    在*Inspector* 中还有几个毛刷选项：3D表示标注时会自动识别所有图片在当前选定区域中的灰度值，并且同步进行识别标注。*Isotropic* 为各向同性处理，*（尚未摸清）*。 *Cursor chases brush* 表示当点击鼠标进行标注时，图像上的十字交叉点会自动跳至光标所在处。
-
-   ​    毛刷分割中点击右键可清除当前选定区域的标注，可用于修改各个算法中生成的标注区域。
-
-
-
-3.  半自动分割 *（Auto-Segmentation）*
-
- 半自动分割的使用分为几步：
-
-   a. 在*Inspector* 区域中选定ROI *（Region of  Interest）*，即图像中出现的红色虚线所表示区域。勾选 *Resample ROI* 表示在分割时可重新选定标注区域；勾选 *Initialize with currer segmentation*  表示使用当前标注区域作为最后区域生长的种子。
-
-   b. 点击*Segment 3D* ，进入分割模式选项。在软件框右方出现预分割阶段1 *（Presegmentation Stage 1）*，在Action中可选择预分割模式 *（Presegmentation mode）*， 该软件共有四种预分割模式，阈值模型 *（Thresholding）*，分类模型 *（Classification）*，聚类模型 *（Clustering）*以及边缘吸引模型 *（Edge Attraction）*。
-
-   选择完模型后，则需要针对不同的模型对参数进行不同的处理。
-
-   1. 阈值模型 *（Thresholding）*
-
-       可调整阈值的大小以及上下阈值模式
-
-   2. 分类模型 *（Classification）*
-
-       需选择不同类别所代表的区域，点击*Train Classifier* 进行训练。
-
-   3. 聚类模型 *（Clustering）*        
-
-       需选择聚类数以及迭代次数
-
-   4. 边缘吸引模型 *（Edge Attraction）*
-
-       需调整平滑因子
-
-   调整参数后，在图像显示区域右上角有一张表示预处理过后得到的图像，称为*Speed Image*， 该图为预处理过后生成的用于后阶段的标注区域生长的基底。
-
-   ​    c.  选择分类模型，初步调整参数后，进入阶段2。
-
-     在预分割阶段2 *（Presegmentation Stage 2）* 中，点击*Add Bubble at Cursor*，在交叉线交点添加*Bubble*，并以此作为图像生长的种子，在按钮下方可调整*Bubble*大小。    
-
-​    d. 点击*Next* 进入预分割阶段3 *（Presegmentation Stage 3）*， 可在 *Set Parameters ...* 可设置生长算法的参数。
-
-​    设置完参数后，点击下方▶按钮进行生长。其右边的按钮表示进行一次迭代，左边的按钮表示恢复原状态。
-
-   ​    在生长完成后，点击下方*Finish*按钮完成自动标注，标注数据会显示在图像中。
-
-
-
-   在此三种标注方法之后，点击图像显示区域的左下角的*update*按钮可将标注块的3D影像图显示在第三块图像区域中。
+<ol>
+<li><p>毛刷分割 <em>（Paintbrush）</em></p>
+<p>   ​毛刷分割需要使用者自行涂刷标注区域。涂刷风格有方形与圆形，且可选择毛刷大小。</p>
+<p>   ​毛刷分割中还有一种区域为自适应涂写，可自动识别毛刷所在区域中的灰度值，并且可以自行识别边界进行标注。</p>
+<p>   ​在<em>Inspector</em> 中还有几个毛刷选项：3D表示标注时会自动识别所有图片在当前选定区域中的灰度值，并且同步进行识别标注。<em>Isotropic</em> 为各向同性处理，<em>（尚未摸清）</em>。 <em>Cursor chases brush</em> 表示当点击鼠标进行标注时，图像上的十字交叉点会自动跳至光标所在处。</p>
+<p>   ​毛刷分割中点击右键可清除当前选定区域的标注，可用于修改各个算法中生成的标注区域。</p>
+</li>
+</ol>
+<ol>
+<li><p>半自动分割 <em>（Auto-Segmentation）</em></p>
+<p> 半自动分割的使用分为几步：</p>
+<p>   a. 在<em>Inspector</em> 区域中选定ROI <em>（Region of  Interest）</em>，即图像中出现的红色虚线所表示区域。勾选 <em>Resample ROI</em> 表示在分割时可重新选定标注区域；勾选 <em>Initialize with currer segmentation</em>  表示使用当前标注区域作为最后区域生长的种子。</p>
+<p>   b. 点击<em>Segment 3D</em> ，进入分割模式选项。在软件框右方出现预分割阶段1 <em>（Presegmentation Stage 1）</em>，在Action中可选择预分割模式 <em>（Presegmentation mode）</em>， 该软件共有四种预分割模式，阈值模型 <em>（Thresholding）</em>，分类模型 <em>（Classification）</em>，聚类模型 <em>（Clustering）</em>以及边缘吸引模型 <em>（Edge Attraction）</em>。</p>
+<p>   选择完模型后，则需要针对不同的模型对参数进行不同的处理。</p>
+<ol>
+<li><p>阈值模型 <em>（Thresholding）</em></p>
+<p> 可调整阈值的大小以及上下阈值模式</p>
+</li>
+<li><p>分类模型 <em>（Classification）</em></p>
+<p> 需选择不同类别所代表的区域，点击<em>Train Classifier</em> 进行训练。</p>
+</li>
+<li><p>聚类模型 <em>（Clustering）</em>        </p>
+<p> 需选择聚类数以及迭代次数</p>
+</li>
+<li><p>边缘吸引模型 <em>（Edge Attraction）</em></p>
+<p> 需调整平滑因子</p>
+<p>调整参数后，在图像显示区域右上角有一张表示预处理过后得到的图像，称为<em>Speed Image</em>， 该图为预处理过后生成的用于后阶段的标注区域生长的基底。</p>
+<p>​    c.  选择分类模型，初步调整参数后，进入阶段2。</p>
+<p>在预分割阶段2 <em>（Presegmentation Stage 2）</em> 中，点击<em>Add Bubble at Cursor</em>，在交叉线交点添加<em>Bubble</em>，并以此作为图像生长的种子，在按钮下方可调整<em>Bubble</em>大小。    </p>
+</li>
+</ol>
+<p>​    d. 点击<em>Next</em> 进入预分割阶段3 <em>（Presegmentation Stage 3）</em>， 可在 <em>Set Parameters …</em> 可设置生长算法的参数。</p>
+<p>​    设置完参数后，点击下方▶按钮进行生长。其右边的按钮表示进行一次迭代，左边的按钮表示恢复原状态。</p>
+<p>   ​    在生长完成后，点击下方<em>Finish</em>按钮完成自动标注，标注数据会显示在图像中。</p>
+</li>
+</ol>
+<pre><code>在此三种标注方法之后，点击图像显示区域的左下角的*update*按钮可将标注块的3D影像图显示在第三块图像区域中。
 </code></pre><ul>
 <li><h6 id="分割数据-（Segmentation）"><a href="#分割数据-（Segmentation）" class="headerlink" title="分割数据 （Segmentation）"></a>分割数据 <em>（Segmentation）</em></h6><p>​    对于加载入图像显示区域的图像，可以通过<em>Segmentation</em> 菜单中的<em>Open Segmentation</em> 工具或者<em>Recent Segmentation</em> 直接载入图像的标注数据。</p>
 <p>​    对于已标注的图像数据，也可以通过<em>Segmentation</em>菜单中的<em>Save Segmentation Image</em> 工具保存或者<em>Unload Segmentation</em> 卸载图像数据的标注数据。</p>
@@ -229,6 +174,45 @@
 </ol>
 <h1 id="核心算法分析"><a href="#核心算法分析" class="headerlink" title="核心算法分析"></a>核心算法分析</h1><p><a href="http://shengliangd.coding.me/archivers/ITK-SNAP-Core-Algorithm" target="_blank" rel="noopener">这里</a>。</p>
 <h1 id="程序运行时行为特征分析"><a href="#程序运行时行为特征分析" class="headerlink" title="程序运行时行为特征分析"></a>程序运行时行为特征分析</h1><h1 id="应用优化方案"><a href="#应用优化方案" class="headerlink" title="应用优化方案"></a>应用优化方案</h1><p>算法优化，提高其自动化程度，直至能够全自动标注图像中的肿瘤。</p>
+
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2018/07/25/ITK-VTK-Configuring/"></a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="iconfont icon-calendar"></i>2018-07-25</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h2 id="SimpleITK-Activiz-NET-Win10环境配置过程"><a href="#SimpleITK-Activiz-NET-Win10环境配置过程" class="headerlink" title="SimpleITK-Activiz .NET Win10环境配置过程"></a>SimpleITK-Activiz .NET Win10环境配置过程</h2><h3 id="Simple-ITK-配置（IDE-Visual-Studio-2017）"><a href="#Simple-ITK-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Simple ITK 配置（IDE:Visual Studio 2017）"></a>Simple ITK 配置（IDE:Visual Studio 2017）</h3><ol>
+<li>下载源码并解压缩<em>（x64 version）</em> <a href="https://sourceforge.net/projects/simpleitk/files/SimpleITK/1.1.0/CSharp/SimpleITK-1.1.0-CSharp-win64-x64.zip/download" target="_blank" rel="noopener">源蛤网址</a></li>
+<li>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</li>
+<li>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的SimpleITKCSharpManaged.dll添加入引用，勾选后确定。</li>
+<li>将SimpleITKCSharpNative.dll添加至探测路径，即xaml代码所在处。</li>
+</ol>
+<h3 id="Activiz-NET-配置（IDE-Visual-Studio-2017）"><a href="#Activiz-NET-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Activiz .NET 配置（IDE: Visual Studio 2017）"></a>Activiz .NET 配置<em>（IDE: Visual Studio 2017）</em></h3><ol>
+<li><p>下载压缩包Activiz .NET并解压缩<em>（x64 version）</em><a href="https://github.com/William-Y/SwanGeeseDocFile" target="_blank" rel="noopener">Git网址</a> </p>
+</li>
+<li><p>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</p>
+</li>
+<li><p>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的Kitware.mummy.Runtime.dll 与 Kitware.VTK.dll添加入引用，勾选后确定。</p>
+</li>
+</ol>
 
         
         <!-------------->
