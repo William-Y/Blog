@@ -72,6 +72,175 @@
     <article class="post" id="post-excerpt">
       <header>
         <div class="post-title">
+          <h1><a class="post-title-link" href="/2018/07/25/ITK-VTK-Configuring/"></a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="iconfont icon-calendar"></i>2018-07-25</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h2 id="SimpleITK-Activiz-NET-Win10环境配置过程"><a href="#SimpleITK-Activiz-NET-Win10环境配置过程" class="headerlink" title="SimpleITK-Activiz .NET Win10环境配置过程"></a>SimpleITK-Activiz .NET Win10环境配置过程</h2><h3 id="Simple-ITK-配置（IDE-Visual-Studio-2017）"><a href="#Simple-ITK-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Simple ITK 配置（IDE:Visual Studio 2017）"></a>Simple ITK 配置（IDE:Visual Studio 2017）</h3><ol>
+<li>下载源码并解压缩<em>（x64 version）</em> <a href="https://sourceforge.net/projects/simpleitk/files/SimpleITK/1.1.0/CSharp/SimpleITK-1.1.0-CSharp-win64-x64.zip/download" target="_blank" rel="noopener">源蛤网址</a></li>
+<li>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</li>
+<li>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的SimpleITKCSharpManaged.dll添加入引用，勾选后确定。</li>
+<li>将SimpleITKCSharpNative.dll添加至探测路径，即xaml代码所在处。</li>
+</ol>
+<h3 id="Activiz-NET-配置（IDE-Visual-Studio-2017）"><a href="#Activiz-NET-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Activiz .NET 配置（IDE: Visual Studio 2017）"></a>Activiz .NET 配置<em>（IDE: Visual Studio 2017）</em></h3><ol>
+<li><p>下载压缩包Activiz .NET并解压缩<em>（x64 version）</em><a href="https://github.com/William-Y/SwanGeeseDocFile" target="_blank" rel="noopener">Git网址</a> </p>
+</li>
+<li><p>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</p>
+</li>
+<li><p>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的Kitware.mummy.Runtime.dll 与 Kitware.VTK.dll添加入引用，勾选后确定。</p>
+</li>
+</ol>
+
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2018/07/25/SwanGeeseDoc/"></a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="iconfont icon-calendar"></i>2018-07-25</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <p>[TOC]</p>
+<p>注：目前仅打框架、记录重要信息。</p>
+<h1 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h1><p>见<a href="http://www.itksnap.org/docs/viewtutorial.php?chapter=TutorialSectionIntroduction" target="_blank" rel="noopener">官网的说明</a>。</p>
+<h1 id="编译、安装与运行"><a href="#编译、安装与运行" class="headerlink" title="编译、安装与运行"></a>编译、安装与运行</h1><h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>见<a href="http://shengliangd.coding.me/archivers/build-ITK-SNAP" target="_blank" rel="noopener">这里</a>。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>可以直接安装二进制包，不再赘述。</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>直接执行可执行文件即可。</p>
+<h1 id="软件使用说明"><a href="#软件使用说明" class="headerlink" title="软件使用说明"></a>软件使用说明</h1><ul>
+<li><h6 id="打开文件-（File）"><a href="#打开文件-（File）" class="headerlink" title="打开文件 （File）"></a>打开文件 <em>（File）</em></h6><p>​    右上角 <em>File</em> 中选择 <em>Open Main Image（快捷键Ctrl+G）</em> 浏览文件地址进行选定，也可以通过 <em>Recent Main Image</em>  选择文件地址，或者在主显示栏上方的 <em>Recent Image</em> 中通过影像缩略图进行打开。</p>
+<p>​    打开文件后在软件的主显示栏会显示图片的三视图以及分割块的立体形状，可用鼠标滚轮调整光标所在视图处的图像在图片集中的位置。</p>
+</li>
+</ul>
+<ul>
+<li><h6 id="图像编辑-（Edit）"><a href="#图像编辑-（Edit）" class="headerlink" title="图像编辑 （Edit）"></a>图像编辑 <em>（Edit）</em></h6><p>​    itk-snap中对影像标注的方法有三种，分别为多边形分割 <em>（Polygon Segmentation）</em>，毛刷分割 <em>（Paintbrush）</em> 和半自动分割 <em>（Auto-Segmentation）</em>。</p>
+<p>​    分割时可使用不同的Label代表不同的分割块，以此起到区分作用。 </p>
+<ol>
+<li><p>多边形分割 <em>（Polygon Segmentation）</em></p>
+<p>​    多边形分割中有两种分割区域选定模式，一为<em>Smooth Curve</em> ，一为<em>Polygon</em> 。</p>
+<p>​     <em>Smooth Curve</em>模式中，使用者可使用鼠标于图中做出任意形状的封闭曲线，并以此为依据做出分割区域。</p>
+<p>​     <em>Polygon</em>模式中，使用者使用鼠标在图中给出多个点，并将各点依次连接形成封闭多边形，以此为依据做出分割区域。<em>Segmentation Length</em> 为连续作画时的最长大小。</p>
+<p>​    作画完成后，若曲线末端未相互连接，可点击图像下方的<em>complete</em>用于封闭图形，而后点击<em>accept</em> 进行标注，标注前可勾选<em>Invert polygon</em> 用以标注封闭多边形外部。</p>
+</li>
+</ol>
+</li>
+</ul>
+<pre><code>2. 毛刷分割 *（Paintbrush）*
+
+   ​    毛刷分割需要使用者自行涂刷标注区域。涂刷风格有方形与圆形，且可选择毛刷大小。
+
+   ​    毛刷分割中还有一种区域为自适应涂写，可自动识别毛刷所在区域中的灰度值，并且可以自行识别边界进行标注。
+
+   ​    在*Inspector* 中还有几个毛刷选项：3D表示标注时会自动识别所有图片在当前选定区域中的灰度值，并且同步进行识别标注。*Isotropic* 为各向同性处理，*（尚未摸清）*。 *Cursor chases brush* 表示当点击鼠标进行标注时，图像上的十字交叉点会自动跳至光标所在处。
+
+   ​    毛刷分割中点击右键可清除当前选定区域的标注，可用于修改各个算法中生成的标注区域。
+
+
+
+3.  半自动分割 *（Auto-Segmentation）*
+
+ 半自动分割的使用分为几步：
+
+   a. 在*Inspector* 区域中选定ROI *（Region of  Interest）*，即图像中出现的红色虚线所表示区域。勾选 *Resample ROI* 表示在分割时可重新选定标注区域；勾选 *Initialize with currer segmentation*  表示使用当前标注区域作为最后区域生长的种子。
+
+   b. 点击*Segment 3D* ，进入分割模式选项。在软件框右方出现预分割阶段1 *（Presegmentation Stage 1）*，在Action中可选择预分割模式 *（Presegmentation mode）*， 该软件共有四种预分割模式，阈值模型 *（Thresholding）*，分类模型 *（Classification）*，聚类模型 *（Clustering）*以及边缘吸引模型 *（Edge Attraction）*。
+
+   选择完模型后，则需要针对不同的模型对参数进行不同的处理。
+
+   1. 阈值模型 *（Thresholding）*
+
+       可调整阈值的大小以及上下阈值模式
+
+   2. 分类模型 *（Classification）*
+
+       需选择不同类别所代表的区域，点击*Train Classifier* 进行训练。
+
+   3. 聚类模型 *（Clustering）*        
+
+       需选择聚类数以及迭代次数
+
+   4. 边缘吸引模型 *（Edge Attraction）*
+
+       需调整平滑因子
+
+   调整参数后，在图像显示区域右上角有一张表示预处理过后得到的图像，称为*Speed Image*， 该图为预处理过后生成的用于后阶段的标注区域生长的基底。
+
+   ​    c.  选择分类模型，初步调整参数后，进入阶段2。
+
+     在预分割阶段2 *（Presegmentation Stage 2）* 中，点击*Add Bubble at Cursor*，在交叉线交点添加*Bubble*，并以此作为图像生长的种子，在按钮下方可调整*Bubble*大小。    
+
+​    d. 点击*Next* 进入预分割阶段3 *（Presegmentation Stage 3）*， 可在 *Set Parameters ...* 可设置生长算法的参数。
+
+​    设置完参数后，点击下方▶按钮进行生长。其右边的按钮表示进行一次迭代，左边的按钮表示恢复原状态。
+
+   ​    在生长完成后，点击下方*Finish*按钮完成自动标注，标注数据会显示在图像中。
+
+
+
+   在此三种标注方法之后，点击图像显示区域的左下角的*update*按钮可将标注块的3D影像图显示在第三块图像区域中。
+</code></pre><ul>
+<li><h6 id="分割数据-（Segmentation）"><a href="#分割数据-（Segmentation）" class="headerlink" title="分割数据 （Segmentation）"></a>分割数据 <em>（Segmentation）</em></h6><p>​    对于加载入图像显示区域的图像，可以通过<em>Segmentation</em> 菜单中的<em>Open Segmentation</em> 工具或者<em>Recent Segmentation</em> 直接载入图像的标注数据。</p>
+<p>​    对于已标注的图像数据，也可以通过<em>Segmentation</em>菜单中的<em>Save Segmentation Image</em> 工具保存或者<em>Unload Segmentation</em> 卸载图像数据的标注数据。</p>
+<p>​    对于<em>Label</em> 数据亦可通过<em>Import Label Description</em>载入标签，<em>Export Label Description</em> 保存标签。</p>
+<p>​    对于已分割好的数据，可以在<em>Segmentation</em>菜单中的<em>Volumes and Statistics</em>获取各个标签块的体积，像素数，亮度等数据。</p>
+<p>​    </p>
+</li>
+<li><h6 id="工作空间-（Workspace）"><a href="#工作空间-（Workspace）" class="headerlink" title="工作空间 （Workspace）"></a>工作空间 <em>（Workspace）</em></h6><p>​    该菜单用于加载 <em>（Open Workspace &amp; Recent Workspace）</em> 与保存 <em>（Save Workspace &amp; Save Workspace as）</em> 工作空间。</p>
+</li>
+</ul>
+<ul>
+<li><h6 id="工具-（Tools）"><a href="#工具-（Tools）" class="headerlink" title="工具 （Tools）"></a>工具 <em>（Tools）</em></h6><p>​     <em>Tools</em>菜单下的<em>Layer Inspector</em> 选项中包含了影像数据的各种属性，如对比度 <em>（Contrast）</em>，颜色图 <em>（Color Map）</em> 以及元数据 <em>（Metadata）</em>。该选项下的三个选项分别指向上述三种属性。</p>
+<p>​    选项<em>Active  Main Tool</em> 为软件左沿<em>Toolbox</em>中的<em>Main Toolbar</em>中包含功能，分别为交叉线 <em>（Crosshair Tool）</em>，缩放模式 <em>（Zoom/Pan Mode）</em>，多边形分割工具 <em>（Polygon Drawing Tool）</em>，毛刷分割工具 <em>（Paintbrush Mode）</em>， 半自动分割工具 <em>（Active Contour Segmentation Mode）</em>，标注工具 <em>（Annotation Tool）</em>（用于对图上的各种特殊区域进行测量，注释等）。</p>
+<p>​    选项<em>Active 3D Tools</em> 是用于对生成的3D影像进行处理的工具箱，位于<em>Toolbox</em>的最底端。</p>
+<p>​        选定 <em>3D Trackball Tool</em>可切换3D图的视角与缩放。</p>
+<p>​        选定<em>3D Crosshair Tool</em>，点击鼠标左键可调整三轴交叉点的位置。</p>
+<p>​        选定<em>3D Scalpel Tool</em>，将Label切换为与当前3D影像不同的Label，可在3D影像表面做出标记。</p>
+<p>​        选定<em>3D Spray Paint Tool</em>，点击鼠标左键选择切平面，可得到一个法向量一定的可平移平面。</p>
+<p>​    选项<em>Reorient Image</em>用于重制图像显示区域的三视图。</p>
+</li>
+</ul>
+<h1 id="软件结构与执行流程分析"><a href="#软件结构与执行流程分析" class="headerlink" title="软件结构与执行流程分析"></a>软件结构与执行流程分析</h1><h2 id="半自动化图像分割流程"><a href="#半自动化图像分割流程" class="headerlink" title="半自动化图像分割流程"></a>半自动化图像分割流程</h2><ol>
+<li>使用四种预处理算法之一进行预处理；</li>
+<li>设定初始区域；</li>
+<li>使用 level set 算法使初始区域生长至适当范围。</li>
+</ol>
+<h1 id="核心算法分析"><a href="#核心算法分析" class="headerlink" title="核心算法分析"></a>核心算法分析</h1><p><a href="http://shengliangd.coding.me/archivers/ITK-SNAP-Core-Algorithm" target="_blank" rel="noopener">这里</a>。</p>
+<h1 id="程序运行时行为特征分析"><a href="#程序运行时行为特征分析" class="headerlink" title="程序运行时行为特征分析"></a>程序运行时行为特征分析</h1><h1 id="应用优化方案"><a href="#应用优化方案" class="headerlink" title="应用优化方案"></a>应用优化方案</h1><p>算法优化，提高其自动化程度，直至能够全自动标注图像中的肿瘤。</p>
+
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
           <h1><a class="post-title-link" href="/2018/03/13/DecisionTree/">DecisionTree</a></h1>
         </div>
         <div class="post-meta">

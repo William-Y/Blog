@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#34495e">
-  <title>DecisionTree | Hexo</title>
+  <title>Hexo</title>
   <link rel="alternate" href="path/of/rss" type="application/atom+xml">
   <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css">
@@ -59,11 +59,9 @@
     <div class="banner-title">
       
         <div class="post-title">
-          DecisionTree
+          
             <div class="post-tags">
     		    
-              <a class="tag-link" href="/tags/Machine-Learning/">Machine-Learning</a>
-            
     	      </div>
         </div>
       
@@ -77,15 +75,13 @@
 
   <header>
     <div class="post-title mobile-post-title">
-      <h1>DecisionTree</h1>
+      <h1></h1>
         <div class="post-tags">
-        
-          <a class="tag-link" href="/tags/Machine-Learning/">Machine-Learning</a>
         
         </div>
     </div>
     <div class="post-meta">
-      <span class="post-time"><i class="iconfont icon-calendar"></i>2018-03-13</span>
+      <span class="post-time"><i class="iconfont icon-calendar"></i>2018-07-25</span>
       
       <!----------------------------------->
         
@@ -96,31 +92,26 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Decision-Tree"><span class="toc-text"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Brief-Flow-Path"><span class="toc-text"><a href="#Brief-Flow-Path" class="headerlink" title="- Brief Flow Path"></a>- Brief Flow Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Choosing-Features"><span class="toc-text"><a href="#Choosing-Features" class="headerlink" title="- Choosing Features"></a>- Choosing Features</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SimpleITK-Activiz-NET-Win10环境配置过程"><span class="toc-text"><a href="#SimpleITK-Activiz-NET-Win10&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;" class="headerlink" title="SimpleITK-Activiz .NET Win10&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;"></a>SimpleITK-Activiz .NET Win10&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-ITK-配置（IDE-Visual-Studio-2017）"><span class="toc-text"><a href="#Simple-ITK-&#x914D;&#x7F6E;&#xFF08;IDE-Visual-Studio-2017&#xFF09;" class="headerlink" title="Simple ITK &#x914D;&#x7F6E;&#xFF08;IDE:Visual Studio 2017&#xFF09;"></a>Simple ITK &#x914D;&#x7F6E;&#xFF08;IDE:Visual Studio 2017&#xFF09;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Activiz-NET-配置（IDE-Visual-Studio-2017）"><span class="toc-text"><a href="#Activiz-NET-&#x914D;&#x7F6E;&#xFF08;IDE-Visual-Studio-2017&#xFF09;" class="headerlink" title="Activiz .NET &#x914D;&#x7F6E;&#xFF08;IDE: Visual Studio 2017&#xFF09;"></a>Activiz .NET &#x914D;&#x7F6E;<em>&#xFF08;IDE: Visual Studio 2017&#xFF09;</em></span></a></li></ol></li></ol>
     </div>
   </div>
 
 
   <div class="post-content">
-    <h2 id="Decision-Tree"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</h2><p><em>It’s a study note during the learning process of Algorithm of Machine Learning</em></p>
-<p><em>The model to be introduced is based on the genesis version of Decision Tree.–ID3 Decision Tree.</em></p>
-<p><em>Here are some critical points of this process.</em></p>
-<ul>
-<li>Information Entropy</li>
-<li>Information Gain</li>
-</ul>
-<p><em>We will introduce these concepts at the steps in need.</em></p>
-<hr>
-<h4 id="Brief-Flow-Path"><a href="#Brief-Flow-Path" class="headerlink" title="- Brief Flow Path"></a>- Brief Flow Path</h4><p>   For a given data set, we assume that all the value of its features are discrete for simplyfying. Now, we build a root node that represent the whole data set.<br>  To enable us making better decision, we need to find a feature that split the data set into a number of pieces based on its values. More than that, the feature we’ve chosen should make those small datasets bias enough for us to make decision. For those small pieces which is still not bias enough, we need to repeat this preocess on them till they are bias enough or the features are used up.</p>
-<h4 id="Choosing-Features"><a href="#Choosing-Features" class="headerlink" title="- Choosing Features"></a>- Choosing Features</h4><p>  Here we need to understand a critical concept mentioned above : <em>Information Entropy</em>, which is a kind of measurement for testing the purity of a sample set.</p>
-<p>  We denote <em>Ent(D)</em> as the Information Entropy of dataset <em>D</em>.</p>
-<p>  Another concept named <em>Information Gain</em> is the different between the Information Entropy of D and the after-split dataset.</p>
-<p>  We denote <em>Gain(D,a)</em> as the Information Gain of <em>D</em> while the chosen feature is <em>a</em>.</p>
-<p>  Now,for every time that we need to expand the Decision Tree, we can use the Information Gain to estimate every feature remains and choose the one that maximazing the Information Gain.</p>
-<p>  Actually, the algorithm of ID3 is just as simple as above. But it’s indeed efficient and accurate for many situation.</p>
-<p>  Nevertheless, in the family of Decision Tree, there are many improved algorithm such as ID4.5, CART that is based on ID3.</p>
-<p>  For ID4.5, it substitutes the Information Gain with Information Gain Ratio as the criteria for choosing features. And CART uses the Gini index instead.</p>
-<p>  They all optimize the ID3 in some aspect and improve the accuracy of classification. Moreover, the CART can be used in regression question.</p>
+    <h2 id="SimpleITK-Activiz-NET-Win10环境配置过程"><a href="#SimpleITK-Activiz-NET-Win10环境配置过程" class="headerlink" title="SimpleITK-Activiz .NET Win10环境配置过程"></a>SimpleITK-Activiz .NET Win10环境配置过程</h2><h3 id="Simple-ITK-配置（IDE-Visual-Studio-2017）"><a href="#Simple-ITK-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Simple ITK 配置（IDE:Visual Studio 2017）"></a>Simple ITK 配置（IDE:Visual Studio 2017）</h3><ol>
+<li>下载源码并解压缩<em>（x64 version）</em> <a href="https://sourceforge.net/projects/simpleitk/files/SimpleITK/1.1.0/CSharp/SimpleITK-1.1.0-CSharp-win64-x64.zip/download" target="_blank" rel="noopener">源蛤网址</a></li>
+<li>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</li>
+<li>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的SimpleITKCSharpManaged.dll添加入引用，勾选后确定。</li>
+<li>将SimpleITKCSharpNative.dll添加至探测路径，即xaml代码所在处。</li>
+</ol>
+<h3 id="Activiz-NET-配置（IDE-Visual-Studio-2017）"><a href="#Activiz-NET-配置（IDE-Visual-Studio-2017）" class="headerlink" title="Activiz .NET 配置（IDE: Visual Studio 2017）"></a>Activiz .NET 配置<em>（IDE: Visual Studio 2017）</em></h3><ol>
+<li><p>下载压缩包Activiz .NET并解压缩<em>（x64 version）</em><a href="https://github.com/William-Y/SwanGeeseDocFile" target="_blank" rel="noopener">Git网址</a> </p>
+</li>
+<li><p>在Visual Studio中打开解决方案属性，点入配置管理器，将所建项目的平台与活动解决方案平台改为x64。</p>
+</li>
+<li><p>在引用处点击右键，点击添加引用，进入浏览标签页，将解压缩文件夹中的Kitware.mummy.Runtime.dll 与 Kitware.VTK.dll添加入引用，勾选后确定。</p>
+</li>
+</ol>
 
   </div>
   <div class="post-footer">the end</div>
@@ -129,13 +120,9 @@
           
   <nav class="pagination post-nav">
     
+    
       <a href="/2018/07/25/SwanGeeseDoc/">
-        <span class="prev-post"><i class="iconfont icon-back"></i></span>
-      </a>
-    
-    
-      <a href="/2018/01/31/18-1-31/">
-        <span class="next-post">18-1-31<i class="iconfont icon-more"></i></span>
+        <span class="next-post"><i class="iconfont icon-more"></i></span>
       </a>
     
   </nav>
